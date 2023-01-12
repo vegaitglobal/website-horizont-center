@@ -26,6 +26,7 @@ services:
       - ./backend/scripts:/app/scripts/
       - ./backend/requirements:/app/requirements
       - ./backend/src:/app/src/
+    restart: always
 
   postgres:
     container_name: caregivers-postgres
@@ -36,6 +37,7 @@ services:
       - POSTGRES_DB=caregivers
     volumes:
       - caregivers-postgres-data:/var/lib/postgresql/data
+    restart: always
 
   pgadmin:
     image: dpage/pgadmin4
@@ -49,6 +51,7 @@ services:
       - postgres
     volumes:
       - caregivers-pgadmin-data:/var/lib/pgadmin
+    restart: always
 
   nextjs:
     container_name: caregivers-nextjs
@@ -60,6 +63,7 @@ services:
       - BASE_URL=http://localhost:3000
       - STATIC_DIR=/
       - API_URL=http://localhost:8000/api/v1
+    restart: always
 
 volumes:
   caregivers-postgres-data:

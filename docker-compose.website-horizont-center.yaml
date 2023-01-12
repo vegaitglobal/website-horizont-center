@@ -25,6 +25,7 @@ services:
       - "48501:8000"
     depends_on:
       - postgres
+    restart: always
 
   postgres:
     container_name: horizont-center-postgres
@@ -37,6 +38,7 @@ services:
       - "5432"
     volumes:
       - ".:/var/lib/postgresql/horizont-data:rw"
+    restart: always
 
   nextjs:
     image: codeforacause/website-horizont-center:nextjs-#{TAG_NUMBER}#
@@ -47,3 +49,4 @@ services:
       - BASE_URL=https://horizont.codeforacause.rs
       - API_URL=https://api.horizont.codeforacause.rs/api/v1
       - STATIC_DIR=/
+    restart: always
