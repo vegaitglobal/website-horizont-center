@@ -3,11 +3,12 @@ from django.utils.translation import gettext_lazy as _
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import Group
-
+from rest_framework.authtoken.models import TokenProxy
 from apps.common.admin import ModelAdminMixin
 from apps.users.models import User
 
 admin.site.unregister(Group)
+admin.site.unregister(TokenProxy)
 
 
 class CreateUserForm(UserCreationForm):
@@ -45,7 +46,7 @@ class UserAdmin(BaseUserAdmin, ModelAdminMixin):
             'fields': ('first_name', 'last_name',)
         }),
         (_('Permissions'), {
-            'fields': ('is_active', 'is_staff', 'is_superuser', 'user_permissions',),
+            'fields': ('is_active', 'is_staff', 'is_superuser',),
         }),
         (_('Important dates'), {
             'fields': ('last_login', 'date_joined',)
