@@ -21,24 +21,27 @@ export function BlogFilters ({ onChange }) {
 	}, [categoryOptions]);
 
 	return (
-		<div className={styles.filters}>
-			<Input
-				withSearchIcon
-				className={styles.leftField}
-				id="blogContains"
-				name="blogContains"
-				placeholder="Pretraži..."
-				onChange={(value) => onChange({ contains: value })}
-			/>
-			<Select
-				cla
-				className={styles.rightField}
-				id="blogCategory"
-				name="blogCategory"
-				options={categoryOptions || {}}
-				placeholder="Kategorija..."
-				onChange={(value) => onChange({ category: value })}
-			/>
+		<div className={styles.filtersWrapper}>
+			<p className={styles.explanatoryText}>Pretražite blogove na osnovu sledećih parametara:</p>
+			<div className={styles.filters}>
+				<Input
+					withSearchIcon
+					className={styles.leftField}
+					id="blogContains"
+					name="blogContains"
+					placeholder="Naslov bloga..."
+					onChange={(value) => onChange({ contains: value })}
+				/>
+				<Select
+					cla
+					className={styles.rightField}
+					id="blogCategory"
+					name="blogCategory"
+					options={categoryOptions || {}}
+					placeholder="Kategorija bloga..."
+					onChange={(value) => onChange({ category: value })}
+				/>
+			</div>
 		</div>
 	);
 }
