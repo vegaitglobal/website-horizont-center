@@ -10,57 +10,53 @@
 	@include respond-to(tablet) {
 		width: 100%;
 	}
+}
 
-	.fieldInnerWrapper {
-		position: relative;
-		display: flex;
-		width: 100%;
-	}
+.fieldInnerWrapper {
+	position: relative;
+	display: flex;
+	width: 100%;
+}
 
-	.field {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		padding: 0 24px;
-		height: 48px;
-		width: 100%;
-		font-size: 16px;
-		background: #FFFFFF;
-		border: 1px solid #D0D5DD;
-		border-radius: 10px;
+.field {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding: 0 24px;
+	height: 48px;
+	width: 100%;
+	font-size: 16px;
+	background: #FFFFFF;
+	border: 1px solid #D0D5DD;
+	border-radius: 10px;
 
-		&.textarea {
-			width: calc(100% - 50px);
-			max-width: calc(100% - 50px);
-			padding: 12px 24px;
-			height: 248px;
-			@include text;
-		}
-	}
-
-	input.field {
-		height: 46px;
-	}
-
-	select.field {
-		cursor: pointer;
-	}
-
-	.icon {
-		position: absolute;
-		width: 16px;
-		height: 16px;
-		top: 14px;
-		right: 20px;
-	}
-
-	.charCount {
-		text-align: right;
-		margin: 0;
-		font-size: 16px;
+	&.textarea {
+		width: calc(100% - 50px);
+		max-width: calc(100% - 50px);
+		padding: 12px 24px;
+		height: 248px;
 		@include text;
-		color: $blue-color;
 	}
+}
+
+input.field {
+	height: 46px;
+}
+
+.icon {
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	top: 14px;
+	right: 20px;
+}
+
+.charCount {
+	text-align: right;
+	margin: 0;
+	font-size: 16px;
+	@include text;
+	color: $blue-color;
 }
 
 .fieldWrapperWithError {
@@ -94,4 +90,3 @@
 		color: red;
 	}
 }
-

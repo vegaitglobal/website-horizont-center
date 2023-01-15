@@ -3,8 +3,8 @@ import React, { useCallback, useEffect } from "react";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import styles from "./fields.module.scss";
 import { useFormField } from "../../hooks";
-import { ErrorMessages } from "./error.messages/error.messages";
-import { FieldLabel } from "./field.label/field.label";
+import { ErrorMessages } from "./error-messages/error.messages";
+import { FieldLabel } from "./field-label/field.label";
 import { FIELD_WITH_ERRORS_CLASS_NAME } from "./index";
 
 export const Input = ({

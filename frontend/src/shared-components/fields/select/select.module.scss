@@ -1,0 +1,25 @@
+@import "./../fields.module";
+
+.selectInnerWrapper {
+	@extend .fieldInnerWrapper;
+	border-radius: 10px;
+}
+
+.select {
+	@extend .field;
+	cursor: pointer;
+	background-color: transparent;
+	z-index: 5;
+}
+
+.select svg {
+	z-index: 4;
+}
+
+.fieldWrapperWithError .selectInnerWrapper {
+	background: #fcf4f4;
+}
+
+.fieldWrapperWithError .select {
+	background-color: transparent;
+}
