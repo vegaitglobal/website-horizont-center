@@ -1,17 +1,17 @@
 @import "../../styles/main.scss";
 
 .imageLinksSection {
-	margin: 193px 128px;
+	padding: 193px 128px;
 	display: flex;
 
 	@include respond-to(1500px) {
-		margin: 10%;
+		padding: 10%;
 	}
 	@include respond-to(laptop) {
 		flex-direction: column;
 	}
 	@include respond-to(tablet) {
-		margin: 5%;
+		padding: 5%;
 	}
 }
 

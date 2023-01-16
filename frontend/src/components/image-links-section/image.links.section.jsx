@@ -3,7 +3,7 @@ import styles from "./image.links.section.module.scss";
 
 export function ImageLinksSection () {
 	return (
-		<section className={styles.imageLinksSection}>
+		<section className={[styles.imageLinksSection, styles.lightBlueBackground].join(' ')}>
 			<a className={styles.imageLink} href={"/caregivers"}>
 				<p className={styles.upperText}>NEGOVATELJI</p>
 				<img className={styles.bgImage} src="/images/static.3.jpg" alt="about us"/>
