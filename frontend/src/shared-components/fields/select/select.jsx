@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect } from "react";
-import styles from "./fields.module.scss";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useFormField } from "../../hooks";
-import { ErrorMessages } from "./error.messages/error.messages";
-import { FieldLabel } from "./field.label/field.label";
-import { FIELD_WITH_ERRORS_CLASS_NAME } from "./index";
+import { useFormField } from "../../../hooks";
+import { ErrorMessages } from "../error-messages/error.messages";
+import { FieldLabel } from "../field-label/field.label";
+import { FIELD_WITH_ERRORS_CLASS_NAME } from "../index";
+import styles from "./select.module.scss";
 
 export const Select = ({
 	id,
@@ -47,13 +47,13 @@ export const Select = ({
 	return (
 		<div className={wrapperClassNames}>
 			{label && <FieldLabel label={label} required={required} infoText={infoText}/>}
-			<div className={styles.fieldInnerWrapper}>
+			<div className={styles.selectInnerWrapper}>
 				<select
 					onChange={(event) => updateValue(event.target.value)}
 					name={name}
 					id={id}
 					value={fieldValue}
-					className={styles.field}
+					className={styles.select}
 				>
 					{placeholder && <option key={placeholder} value="">{placeholder}</option>}
 					{Object.entries(options).map(([value, label], _) => (

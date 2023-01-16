@@ -1,8 +1,8 @@
 import styles from "./image.upload.module.scss";
 import React, { useCallback, useEffect } from "react";
 import { useFormField } from "../../../hooks";
-import { ErrorMessages } from "../error.messages/error.messages";
-import { FieldLabel } from "../field.label/field.label";
+import { ErrorMessages } from "../error-messages/error.messages";
+import { FieldLabel } from "../field-label/field.label";
 import { FIELD_WITH_ERRORS_CLASS_NAME } from "../index";
 
 export function ImageUpload({

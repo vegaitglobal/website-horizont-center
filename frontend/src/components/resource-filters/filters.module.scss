@@ -1,9 +1,6 @@
 @import './../../styles/main';
 
-.filters {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.filtersWrapper {
 	margin-top: 70px;
 	padding: 10px 128px;
 
@@ -13,6 +10,22 @@
 	@include respond-to(laptop) {
 		margin-top: 20px;
 	}
+	@include respond-to(tablet) {
+		margin-top: 0;
+	}
+}
+
+.explanatoryText {
+	font-family: "Open Sans", sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.filters {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
 	@include respond-to(tablet) {
 		flex-direction: column;
 	}

@@ -60,7 +60,11 @@ function Beneficiaries(props) {
 		<>
 			<NextSeo {...SEO} />
 			<LayoutDefault>
-				<ProfileFilters onChange={updateFilters}/>
+				<ProfileFilters
+					onChange={updateFilters}
+					explanatoryText={"Pronađi osobu koja traži negu na osnovu sledećih parametara:"}
+					searchWordPlaceholder={"Tip nege..."}
+				/>
 				<BeneficiaryList profiles={beneficiaries}/>
 				<Pagination
 					onPageChange={setActivePageNumber}

@@ -8,7 +8,7 @@ import { prepareSEO } from "../../utils";
 
 const ITEMS_PER_PAGE = 6;
 
-function Caregivers(props) {
+function Caregivers (props) {
 	const { pathname } = props;
 	const SEO = prepareSEO(pathname);
 
@@ -23,13 +23,13 @@ function Caregivers(props) {
 	});
 
 	useEffect(() => {
-		async function fetchCaregivers() {
+		async function fetchCaregivers () {
 			const response = await CaregiversService.getCaregivers(
 				ITEMS_PER_PAGE,
 				activePageNumber,
 				filters.contains,
 				filters.gender,
-				filters.city
+				filters.city,
 			);
 			setCaregivers(response.data.items);
 			setNumberOfPages(response.data.pagination.total_pages);
@@ -45,7 +45,7 @@ function Caregivers(props) {
 			setActivePageNumber(1);
 			setFilters(updatedFilters);
 		},
-		[filters]
+		[filters],
 	);
 
 	if (isLoading) {
@@ -60,7 +60,11 @@ function Caregivers(props) {
 		<>
 			<NextSeo {...SEO} />
 			<LayoutDefault pathname={pathname}>
-				<ProfileFilters onChange={updateFilters}/>
+				<ProfileFilters
+					onChange={updateFilters}
+					explanatoryText={"Pronađi negovatelja na osnovu sledećih parametara:"}
+					searchWordPlaceholder={"Profesija..."}
+				/>
 				<CaregiverList profiles={caregivers}/>
 				<Pagination
 					onPageChange={setActivePageNumber}
@@ -72,7 +76,7 @@ function Caregivers(props) {
 	);
 }
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps (ctx) {
 	const { resolvedUrl } = ctx;
 	return {
 		props: {
