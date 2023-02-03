@@ -37,9 +37,10 @@ Run the command below to load (all) test data (fixtures):
 
 ### Superuser (optional)
 
-In order to log in to Django Admin (http://localhost:8000/), you will need a staff user. 
-When running `docker compose up` command for the first time, a superuser is automatically 
+In order to log in to Django Admin (http://localhost:8000/), you will need a staff user.
+When running `docker compose up` command for the first time, a superuser is automatically
 created with these credentials:
+
 - email: admin@example.com
 - password: admin
 
@@ -54,6 +55,7 @@ If you want to create another superuser, run this command:
 [pgAdmin](https://www.pgadmin.org/) is an administration and development platform for PostgreSQL
 database. After running `docker compose up` command, pgAdmin should be available at http://0.0.0.0:8080/
 To log in, use these credentials:
+
 - email: admin@example.com
 - password: admin
 
@@ -69,3 +71,15 @@ Once you successfully log in, follow these steps to connect to the database:
     - password: `caregivers`
 4. Click on the "Save" button and a connection with the database should be created and visible
    under the "Servers" menu item located in the left vertical navigation of the pgAdmin page.
+
+## Production setup
+
+The only difference between development and production is in the web server. Development is using
+the server that comes with Django. It is lightwait, and it shouldn't be used in production.
+
+Production is using [Gunicorn](https://gunicorn.org/) web server which is optimized for production
+environments.
+
+To start the project in production environment, run:
+
+    docker compose -f docker-compose.production.yml up

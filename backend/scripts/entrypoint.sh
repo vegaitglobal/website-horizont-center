@@ -29,7 +29,7 @@ initialize_django_project() {
     python3 /app/src/manage.py migrate
     python3 /app/src/manage.py create_superuser --noinput
     python3 /app/src/manage.py compilemessages
-    python3 /app/src/manage.py runserver 0.0.0.0:8000
+    python3 -m gunicorn caregivers.wsgi --bind 0.0.0.0:8000 --chdir /app/src/
 
   else
     printc "[ERROR]: Unknown environment: '$APP_ENV'." "danger"
