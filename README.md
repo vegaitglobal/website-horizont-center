@@ -4,9 +4,17 @@ This project is divided into [backend/](/backend) and [frontend/](/frontend) dir
 The backend directory contains Django application, and the frontend directory contains
 Next.js application.
 
-## Development setup
+Table of Contents
+=================
 
-### Requirements
+* [Requirements](#requirements)
+* [Development setup](#development-setup)
+    * [Fixtures](#fixtures--optional-)
+    * [Superuser](#superuser--optional-)
+    * [pgAdmin](#pgadmin--optional-)
+* [Production setup](#production-setup)
+
+## Requirements
 
 - **Docker**:
     - Windows - [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
@@ -14,7 +22,11 @@ Next.js application.
     - Linux - [Docker Engine](https://docs.docker.com/engine/install/#server)
       and [Docker Compose](https://docs.docker.com/compose/install/)
 
-### Start Docker containers
+## Development setup
+
+Development is using
+[Django's development server](https://docs.djangoproject.com/en/4.1/intro/tutorial01/#the-development-server).
+It is lightwait, and it shouldn't be used in production.
 
 Run:
 
@@ -74,11 +86,9 @@ Once you successfully log in, follow these steps to connect to the database:
 
 ## Production setup
 
-The only difference between development and production is in the web server. Development is using
-the server that comes with Django. It is lightwait, and it shouldn't be used in production.
-
-Production is using [Gunicorn](https://gunicorn.org/) web server which is optimized for production
-environments.
+The only difference between development and production is in the web server.
+Production is using [Gunicorn](https://gunicorn.org/) web server which is
+optimized for production environments.
 
 To start the project in production environment, run:
 
