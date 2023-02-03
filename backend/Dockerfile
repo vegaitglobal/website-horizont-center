@@ -12,7 +12,7 @@ ADD ./requirements /app/requirements
 ADD ./src /app/src
 
 RUN pip install --upgrade pip
-RUN pip install -r /app/requirements/development.txt
+RUN pip install -r /app/requirements/common.txt
 
 EXPOSE 8000
 ENTRYPOINT [ "sh", "/app/scripts/entrypoint.sh" ]
