@@ -15,7 +15,7 @@ class LoginSerializer(serializers.Serializer):
         self.request = request
 
     def validate(self, attrs):
-        self.user = User.objects.filter(email=attrs['email']).first()
+        self.user = User.objects.filter(email=attrs['email'], is_active=True).first()
         if not (self.user and self.user.check_password(raw_password=attrs['password'])):
             raise serializers.ValidationError(_('Invalid credentials'))
 
