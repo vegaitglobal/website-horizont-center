@@ -1,9 +1,10 @@
 # Python imports
 import sys
+from copy import deepcopy
+from django.utils.log import DEFAULT_LOGGING
+from django.utils.translation import gettext_lazy as _
 from os import getenv
 from os.path import abspath, basename, dirname, join, normpath
-
-from django.utils.translation import gettext_lazy as _
 
 # ##### PATH CONFIGURATION ################################
 
@@ -111,10 +112,6 @@ CORS_ALLOWED_ORIGINS = [
 SECRET_FILE = normpath(join(PROJECT_ROOT, 'run', 'SECRET.key'))
 
 # these persons receive error notification
-ADMINS = (
-    ('your name', 'your_name@example.com'),
-)
-MANAGERS = ADMINS
 
 # ##### DJANGO RUNNING CONFIGURATION ######################
 
@@ -193,3 +190,9 @@ ALLOWED_HOSTS = [
 ]
 DJANGO_PORT = getenv('DJANGO_PORT')
 CSRF_TRUSTED_ORIGINS = [getenv('CSRF_TRUSTED_ORIGIN', f'http://{ALLOWED_HOST}')]
+
+# Disable error emails:
+#   - based on: https://lincolnloop.com/insights/disabling-error-emails-django/
+logging_dict = deepcopy(DEFAULT_LOGGING)
+logging_dict['loggers']['django']['handlers'] = ['console']
+LOGGING = logging_dict
