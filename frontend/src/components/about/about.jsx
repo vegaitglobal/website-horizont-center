@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./about.module.scss";
-import { CenteredSection, PageHeader, SectionWithImage } from "../../shared-components";
+import { PageHeader, SectionWithImage } from "../../shared-components";
 import { ImageLinksSection } from "../image-links-section/image.links.section";
 import { CountersSection } from "../counters-section/counters.section";
 import { OrganizationPartnersSection } from "../organization-partners-section/organization.partners.section";
@@ -41,27 +41,6 @@ export const About = () => {
 							Platforma NEGOVETELJI.RS podržava i osnažuje porodične negovatelje, naročito žene, da se razviju i
 							napreduju kod kuće, na poslu i u životu, povezujući u zajednicu pojedince, institucije, civilno društvo i
 							kompanije spremne da doprinesu dobrobiti negovatelja i osoba o kojima se brinu.
-						</p>
-					</>
-				}
-			/>
-			<CenteredSection
-				withBackground
-				title="Zajednica negovatelja"
-				paragraph={
-					<>
-						<p>
-							Negovatelji.rs je platforma za povezivanje, osnaživanje i podršku svima koji neguju
-							bližnje, nemoćne, zavisne osobe… za sve kojima je potrebna pomoć za kućnu negu
-							bolesnika, dece, supružnika, roditelja, prijatelja…
-						</p>
-						<p>
-							Negovatelji.rs je mesto i za sve koji žele da se angažuju, obrazuju ili uključe u
-							podršku osobama u brizi za bližnje.
-						</p>
-						<p>
-							Pojedinaci, organizacije, institucije, kompanije i mediji koji žele da podrže
-							negovatelje i osobe o kojima brinu, takođe su deo naše zajednice i dobrodišlli ste.
 						</p>
 					</>
 				}

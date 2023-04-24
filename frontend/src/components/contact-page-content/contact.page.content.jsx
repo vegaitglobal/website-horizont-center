@@ -1,5 +1,5 @@
 import React from "react";
-import { CenteredSection, PageHeader, SectionWithImage, StepsSection } from "shared-components";
+import { PageHeader, SectionWithImage } from "shared-components";
 import styles from "./contact.page.content.module.scss";
 
 export const ContactPageContent = () => {
