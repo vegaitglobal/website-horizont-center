@@ -42,6 +42,10 @@
 	font-style: normal;
 	font-weight: 700;
 	color: $title-color;
+	margin: 0 0 10px;
+	@include respond-to(desktop) {
+		margin: 0;
+	}
 }
 
 @mixin subtitle {
@@ -70,14 +74,14 @@
 //Typography
 .h1 {
 	@include title;
-	font-size: 64px;
-	line-height: 81px;
+	font-size: 60px;
+	line-height: 75px;
 }
 
 .h2 {
 	@include title;
-	font-size: 48px;
-	line-height: 60px;
+	font-size: 44px;
+	line-height: 56px;
 }
 
 .h3 {

@@ -11,7 +11,7 @@ export const About = () => {
 		<div className={styles.aboutContent}>
 			<PageHeader
 				withBackground
-				title={"Zajednica"}
+				title={"ZAJEDNICA KOJA BRINE ZA BLIŽNJE"}
 			/>
 			<SectionWithImage
 				hasImageFirst
@@ -69,7 +69,7 @@ export const About = () => {
 			<SectionWithImage
 				hasImageFirst
 				imageSrc="/images/static.2.jpg"
-				title={"Zajednica negovatelja okupljena na platformi NEGOVATELJI.RS posotoji, jer želimo da:"}
+				title={"NEGOVATELJI.RS posotoji, jer želimo da:"}
 				paragraphs={
 					<>
 						<p>Podižemo pažnju javnosti na:</p>
