@@ -4,6 +4,7 @@ import { PageHeader, SectionWithImage } from "../../shared-components";
 import { ImageLinksSection } from "../image-links-section/image.links.section";
 import { CountersSection } from "../counters-section/counters.section";
 import { OrganizationPartnersSection } from "../organization-partners-section/organization.partners.section";
+import { BLOGS_NAV_ITEM, DONATIONS_NAV_ITEM, REGISTRATION_NAV_ITEM } from "../../config/navigation";
 
 export const About = () => {
 
@@ -16,12 +17,26 @@ export const About = () => {
 			<SectionWithImage
 				hasImageFirst
 				imageSrc="/images/static.7.jpg"
+				title="Zajednica negovatelja"
 				paragraphs={
 					<>
-						<p>Zajednica brižnih</p>
-						<p>Pomoć i nega za bližnje</p>
-						<p>Povežite se - Osnažite se - Informišite se</p>
-						<p>Pokrenite kampanju podrške</p>
+						<p>
+							Negovatelji.rs je platforma za povezivanje, osnaživanje i podršku svima koji neguju bližnje,
+							nemoćne, zavisne osobe… za sve kojima je potrebna pomoć za kućnu negu bolesnika, dece,
+							supružnika, roditelja, prijatelja…
+						</p>
+						<p>
+							Negovatelji.rs je mesto i za sve koji žele da se angažuju, obrazuju ili uključe u podršku
+							osobama u brizi za bližnje.
+						</p>
+						<p>
+							Pojedinaci, organizacije, institucije, kompanije i mediji koji žele da podrže negovatelje
+							i osobe o kojima brinu, takođe su deo naše zajednice i dobrodišlli ste. Informiši se – Poveži se
+							– Osnaži se <a href={`/${REGISTRATION_NAV_ITEM.pathname}`}>(Registruj se)</a>.
+						</p>
+						<p><a href={`/${DONATIONS_NAV_ITEM.pathname}`}>Pokreni kampanju podrške</a></p>
+						<p><a href={`/${BLOGS_NAV_ITEM.pathname}`}>Pomozi i sebi i bližnjima koje neguješ</a></p>
+						<p><a href="mailto:zajednica@negovatelji.rs">Predloži promene koje unapređuju život</a></p>
 					</>
 				}
 			/>
