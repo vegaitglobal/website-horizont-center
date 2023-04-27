@@ -1,7 +1,7 @@
 import { defaultField } from "./default.field";
 
 export const beneficiaryProfileFieldset = {
-	title: "IFORMACIJE OSOBE KOJOJ JE POTREBNA NEGA",
+	title: "INFORMACIJE OSOBE KOJOJ JE POTREBNA NEGA",
 	fields: {
 		beneficiary_person: {
 			...defaultField,
