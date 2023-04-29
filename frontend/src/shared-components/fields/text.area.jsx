@@ -21,7 +21,7 @@ export const TextArea = ({
 		defaultValue,
 		shouldValidate,
 		validators,
-		extraErrorMessages
+		extraErrorMessages,
 	);
 
 	useEffect(() => {

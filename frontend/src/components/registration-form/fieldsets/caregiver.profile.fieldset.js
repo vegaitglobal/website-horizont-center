@@ -12,8 +12,14 @@ export const caregiverProfileFieldset = {
 		},
 		work_application: {
 			...defaultField,
-			label: "Profesija",
-			placeholder: "Profesija",
+			label: "Prijava za rad",
+			placeholder: "Prijava za rad",
+			suggestions: [
+				"Negovatelj (sa stečenim stručnim zvanjem)",
+				"Negovatelj (bez stečenog stručnog zvanja)",
+				"Gerentodomaćica/in",
+				"Medicinska sestra/brat",
+			],
 		},
 		experience: {
 			...defaultField,
@@ -24,6 +30,7 @@ export const caregiverProfileFieldset = {
 			...defaultField,
 			label: "Dostupnost tokom nedelje",
 			placeholder: "Dostupnost tokom nedelje",
+			infoText: "Navedite koliko dana nedeljno možete pružiti pomoć"
 		},
 		daily_hours: {
 			...defaultField,
@@ -43,6 +50,6 @@ export const caregiverProfileFieldset = {
 			label: "Instagram profil link",
 			placeholder: "Link do vašeg instagram profila",
 			required: false,
-		}
-	}
+		},
+	},
 };
