@@ -35,7 +35,7 @@ const DEFAULT_SEO = {
       },
       {
         name: "google-site-verification",
-        content: "vjLLPOfUtWqkaiBhrojLlAAjsQgFYR14MJwj8baLCXo",
+        content: "RsIRuaj8cTnIpwvgb0cbJ5ZCADQdV62GqPDQTz2o_8A",
       },
     ],
   },
