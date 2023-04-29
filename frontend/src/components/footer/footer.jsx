@@ -37,7 +37,7 @@ export const Footer = ({ isHidden }) => {
         </div>
       </section>
       <section className={styles.copyrightsSection}>
-        <p className={styles.leftSide}>© Copyright 2022 Negovatelji.rs - Sva prava zadržana</p>
+        <p className={styles.leftSide}>© Copyright {new Date().getFullYear()} Negovatelji.rs - Sva prava zadržana</p>
         <p className={styles.rightSide}>Designed by VEGA IT</p>
       </section>
     </footer>
