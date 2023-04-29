@@ -27,7 +27,7 @@ export const ProfileDetailsInfo = ({ profile, infoList }) => {
           <h4 className={`${styles.h4} ${styles.title}`}>{`${profile.user.first_name} ${profile.user.last_name}`}</h4>
           <div className={styles.workApplication}>{profile.work_application}</div>
           <div className={""}>
-            <h5 className={styles.h5}>OPŠTE INFORMACIJE</h5>
+            <h5 className={styles.h5}>DODATNE INFORMACIJE</h5>
             <p className={styles.p1}>{profile.description}</p>
           </div>
           <div className={styles.userDetails}>
