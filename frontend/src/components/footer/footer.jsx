@@ -14,7 +14,7 @@ export const Footer = ({ isHidden }) => {
         <div className={styles.leftSide}>
           <p>
             Društvo koje ceni, podržava i osnažuje porodične negovatelje željena je budućnost Centra HORIZONT 21 i
-            platforme NEGOVATELJI.RS kreirane uz podršku podršku VEGAT IT kompanije i projekta Code For Couse.
+            platforme NEGOVATELJI.RS kreirane uz podršku VEGA IT kompanije i projekta Code For a Cause.
           </p>
           <div className={styles.socialMediaButtons}>
             <a href="https://www.facebook.com/groups/270285275225942/" target="_blank" rel="noreferrer">
