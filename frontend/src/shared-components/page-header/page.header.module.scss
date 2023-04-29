@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
 .pageHeader {
-	padding: 45px 128px 88px;
+	padding: 20px 128px;
 
 	@include respond-to(desktop) {
-		padding: 10%;
+		padding: 20px 10%;
 	}
 	@include respond-to(tablet) {
-		padding: 5%;
+		padding: 20px 5%;
 	}
 
 	.p1 {
