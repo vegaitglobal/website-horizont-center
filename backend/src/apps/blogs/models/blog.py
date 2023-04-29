@@ -17,6 +17,7 @@ class Blog(BaseModel):
         verbose_name=_('cover image'),
         upload_to='images/blogs/blog',
         null=True,
+        help_text=_('Recommended image resolution is 1920×1080 (HD) or higher.')
     )
     description = models.TextField(
         verbose_name=_('description'),
