@@ -105,6 +105,7 @@ export class RegistrationFormFieldFactory {
 				onChange={value => onFieldValueChange(fieldName, value)}
 				validators={field.validators}
 				extraErrorMessages={field.apiValidationErrors}
+				suggestions={field.suggestions}
 			/>
 		);
 	};

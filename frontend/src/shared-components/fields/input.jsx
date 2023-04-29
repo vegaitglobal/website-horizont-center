@@ -23,6 +23,7 @@ export const Input = ({
 	shouldValidate = false,
 	validators = [],
 	extraErrorMessages = [],
+	suggestions = [],
 }) => {
 	const [fieldValue, fieldErrorMessages, updateFieldValue] = useFormField(
 		inputValue,
@@ -60,7 +61,13 @@ export const Input = ({
 					onChange={(event) => updateValue(event.target.value)}
 					placeholder={placeholder}
 					className={styles.field}
+					list={`${id}_suggestions`}
 				/>
+				{suggestions && (
+					<datalist id={`${id}_suggestions`}>
+						{suggestions.map(suggestion => <option key={suggestion}>{suggestion}</option>)}
+					</datalist>
+				)}
 				{withSearchIcon && <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon}/>}
 			</div>
 			<ErrorMessages errorMessages={fieldErrorMessages}/>

@@ -9,4 +9,5 @@ export const defaultField = {
 	minLength: null,
 	maxLength: null,
 	parentFieldName: null,
+	suggestions: [],
 };

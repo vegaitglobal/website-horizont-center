@@ -12,7 +12,11 @@ export const beneficiaryProfileFieldset = {
 			...defaultField,
 			label: "Period pružanja pomoći",
 			placeholder: "Period pružanja pomoći",
-			infoText: "Primeri: ovog meseca, od xx datuma do xx datuma, tokom xx meseca, tokom xx godine...",
+			infoText: (
+				"Navedite u kom vremenskom periodu Vam je potrebna podrška. " +
+				"Primeri: ovog meseca, od 1. do 15. marta 2023. godine, tokom " +
+				"čitavog februara 2023. godine, tokom čitave 2023. godine..."
+			),
 		},
 		weekly_days: {
 			...defaultField,
@@ -30,6 +34,13 @@ export const beneficiaryProfileFieldset = {
 			...defaultField,
 			label: "Vrsta pomoći",
 			placeholder: "Vrsta pomoći",
-		}
-	}
+			suggestions: [
+				"Socijalizacija i emotivna podrška",
+				"Za vožnju na preglede i obavljanje poslova nabavke",
+				"Demencija, parkinsonova bolest ili neka druga specijalna nega",
+				"Pomoć  u održavanju lične higijene - kupanju, oblačenju i slično",
+				"Kućni poslovi, priprema hrane",
+			],
+		},
+	},
 };
