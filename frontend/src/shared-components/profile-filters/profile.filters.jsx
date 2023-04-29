@@ -3,7 +3,7 @@ import styles from "./profile.filters.module.scss";
 import { Input, Select } from "../fields";
 import { getSerbianCitySelectOptions } from "../../utils";
 
-export function ProfileFilters ({ onChange, explanatoryText, searchWordPlaceholder }) {
+export function ProfileFilters ({ onChange, explanatoryText, searchWordPlaceholder, inputSuggestions = [] }) {
 	const [cityOptions, setCityOptions] = useState({});
 
 	useEffect(() => {
@@ -26,6 +26,7 @@ export function ProfileFilters ({ onChange, explanatoryText, searchWordPlacehold
 						name="profileContains"
 						placeholder={searchWordPlaceholder || "Pretraži..."}
 						onChange={(value) => onChange({ contains: value })}
+						suggestions={inputSuggestions}
 					/>
 				</div>
 				<div className={styles.rightSide}>

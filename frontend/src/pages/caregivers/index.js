@@ -5,6 +5,7 @@ import { Pagination, ProfileFilters, Spinner } from "shared-components";
 import { CaregiversService } from "../api/caregiversService";
 import { CaregiverList } from "../../components";
 import { prepareSEO } from "../../utils";
+import { caregiverProfileFieldset } from "../../components/registration-form/fieldsets/caregiver.profile.fieldset";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -63,7 +64,8 @@ function Caregivers (props) {
 				<ProfileFilters
 					onChange={updateFilters}
 					explanatoryText={"Pronađi negovatelja na osnovu sledećih parametara:"}
-					searchWordPlaceholder={"Profesija..."}
+					searchWordPlaceholder={"Prijava za rad..."}
+					inputSuggestions={caregiverProfileFieldset.fields.work_application.suggestions}
 				/>
 				<CaregiverList profiles={caregivers}/>
 				<Pagination
