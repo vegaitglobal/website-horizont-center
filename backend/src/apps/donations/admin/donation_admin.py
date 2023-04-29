@@ -26,10 +26,6 @@ class DonationAdmin(admin.ModelAdmin, ModelAdminMixin):
         DonationCompanyAdminInline,
         FinancialInfoAdminInline
     ]
-    ordering = (
-        'is_active',
-        'title'
-    )
 
     def is_financial(self, obj: Donation = None) -> bool:
         return bool(obj.financial_info)

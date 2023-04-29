@@ -1,3 +1,4 @@
+from django.db.models import QuerySet
 from django_filters import rest_framework as filters
 from apps.donations.filters import DonationFilterSet
 from apps.donations.models import Donation
@@ -10,3 +11,6 @@ class DonationViewSet(ViewSet):
     serializer_class = DonationSerializer
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_class = DonationFilterSet
+
+    def filter_queryset(self, queryset) -> QuerySet:
+        return super().filter_queryset(queryset=queryset.order_by('-is_active', '-created'))

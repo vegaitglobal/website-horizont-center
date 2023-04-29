@@ -9,6 +9,10 @@ class Donation(BaseModel):
     class Meta:
         verbose_name = _('Donation')
         verbose_name_plural = _('Donations')
+        ordering = (
+            '-is_active',
+            '-created',
+        )
 
     title = models.CharField(
         verbose_name=_('title'),
