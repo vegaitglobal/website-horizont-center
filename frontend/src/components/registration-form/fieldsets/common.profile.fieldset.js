@@ -1,7 +1,7 @@
 import { defaultField } from "./default.field";
 
 export const commonProfileFieldset = {
-	title: "ISKUSTVO I STRUČNA SPREMA",
+	title: "KONTAKT PODACI",
 	fields: {
 		profile_type: {
 			...defaultField,
