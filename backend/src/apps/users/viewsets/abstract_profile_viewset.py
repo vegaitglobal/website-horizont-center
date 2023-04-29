@@ -1,5 +1,6 @@
 from http.client import BAD_REQUEST, NOT_FOUND
 
+from django.db.models import QuerySet
 from django.utils.translation import gettext_lazy as _
 from django.http import JsonResponse
 from rest_framework.permissions import IsAuthenticated
@@ -12,6 +13,9 @@ class AbstractProfileViewSet(ViewSet):
         'retrieve': [IsAuthenticated],
         'partial_update': [IsAuthenticated],
     }
+
+    def filter_queryset(self, queryset) -> QuerySet:
+        return super().filter_queryset(queryset=queryset.filter(user__is_active=True))
 
     def get_serializer_kwargs(self, **kwargs) -> dict:
         kwargs = super(AbstractProfileViewSet, self).get_serializer_kwargs(**kwargs)
