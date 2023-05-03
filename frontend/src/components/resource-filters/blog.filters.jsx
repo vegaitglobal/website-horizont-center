@@ -26,7 +26,7 @@ export function BlogFilters ({ onChange }) {
 			<div className={styles.filters}>
 				<Input
 					withSearchIcon
-					className={styles.leftField}
+					className={styles.field}
 					id="blogContains"
 					name="blogContains"
 					placeholder="Naslov bloga..."
@@ -34,7 +34,7 @@ export function BlogFilters ({ onChange }) {
 				/>
 				<Select
 					cla
-					className={styles.rightField}
+					className={styles.field}
 					id="blogCategory"
 					name="blogCategory"
 					options={categoryOptions || {}}

@@ -60,7 +60,7 @@ services:
     build:
       context: ./frontend
     environment:
-      - BASE_URL=http://localhost:3000
+      - BASE_URL=http://localhost
       - STATIC_DIR=/
       - API_URL=http://localhost:8000/api/v1
     restart: always
