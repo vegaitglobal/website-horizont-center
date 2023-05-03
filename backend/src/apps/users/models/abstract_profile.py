@@ -36,6 +36,8 @@ class AbstractProfile(BaseModel):
             MinLengthValidator(limit_value=100),
         ],
         verbose_name=_('description'),
+        null=True,
+        blank=True,
     )
     user = models.OneToOneField(
         to='users.User',

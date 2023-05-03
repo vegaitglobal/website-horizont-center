@@ -1,3 +1,5 @@
+from django.core.exceptions import ValidationError
+
 from apps.common.models import BaseModel
 from django.utils.translation import gettext_lazy as _
 from django.core.validators import MinLengthValidator
@@ -34,6 +36,8 @@ class BlogSection(BaseModel):
         max_length=100,
         choices=MediaType.choices,
         verbose_name=_('media type'),
+        blank=True,
+        null=True,
     )
     blog = models.ForeignKey(
         to='blogs.Blog',
@@ -42,3 +46,9 @@ class BlogSection(BaseModel):
         on_delete=models.CASCADE,
         null=True
     )
+
+    def clean(self):
+        super().clean()
+        if self.media_url and not self.media_type:
+            message = _('If "Media URL" is set, "media type" must be set as well (for that "Media URL").')
+            raise ValidationError({'media_type': message})

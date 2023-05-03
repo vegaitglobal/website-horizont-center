@@ -30,18 +30,7 @@
 		flex-direction: column;
 	}
 
-	.leftField {
-		width: 40%;
-
-		@include respond-to(laptop) {
-			width: 50%;
-		}
-		@include respond-to(tablet) {
-			width: 100%;
-		}
-	}
-
-	.rightField {
+	.field {
 		width: 30%;
 
 		@include respond-to(laptop) {

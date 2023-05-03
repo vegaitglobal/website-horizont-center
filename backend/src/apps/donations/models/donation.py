@@ -9,6 +9,10 @@ class Donation(BaseModel):
     class Meta:
         verbose_name = _('Donation')
         verbose_name_plural = _('Donations')
+        ordering = (
+            '-is_active',
+            '-created',
+        )
 
     title = models.CharField(
         verbose_name=_('title'),
@@ -22,6 +26,7 @@ class Donation(BaseModel):
         verbose_name=_('cover image'),
         upload_to='images/donations/donation',
         null=True,
+        help_text=_('Recommended image resolution is 1920×1080 (HD) or higher.')
     )
     description = models.TextField(
         validators=[
