@@ -4,7 +4,7 @@ const BASE_RESOURCE_NAME = "blogs";
 
 export const BlogsService = {
   getPublishedBlogs: (pageSize, pageNumber, contains, category) => {
-    let queryParams = `ipp=${pageSize}&page=${pageNumber}&is_published=true`;
+    let queryParams = `ipp=${pageSize}&page=${pageNumber}`;
     if (contains) queryParams += `&contains=${contains}`;
     if (category) queryParams += `&category_name=${category}`;
     return API.getAllResources(BASE_RESOURCE_NAME, queryParams);

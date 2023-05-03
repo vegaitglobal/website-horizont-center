@@ -16,13 +16,17 @@
 
 .tooltip .tooltiptext {
 	visibility: hidden;
-	width: 200px;
+	width: 300px;
+	min-height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border: 1px solid $blue-color;
 	background-color: $light-blue-color;
 	color: $input-text-color;
 	text-align: center;
 	border-radius: 10px;
-	padding: 5px 0;
+	padding: 8px;
 	position: absolute;
 	left: 0;
 	top: 24px;

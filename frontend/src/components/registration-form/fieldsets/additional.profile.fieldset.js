@@ -14,8 +14,8 @@ export const additionalProfileFieldset = {
 			...defaultField,
 			type: "textarea",
 			placeholder: "Dodatne informacije",
-			minLength: 100,
 			maxLength: 500,
+			required: false
 		},
 	},
 };

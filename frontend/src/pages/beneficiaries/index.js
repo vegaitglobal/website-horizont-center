@@ -5,10 +5,11 @@ import { Pagination, ProfileFilters, Spinner } from "shared-components";
 import { BeneficiariesService } from "../api/beneficiariesService";
 import { BeneficiaryList } from "components";
 import { prepareSEO } from "../../utils";
+import { beneficiaryProfileFieldset } from "../../components/registration-form/fieldsets/beneficiary.profile.fieldset";
 
 const ITEMS_PER_PAGE = 6;
 
-function Beneficiaries(props) {
+function Beneficiaries (props) {
 	const { pathname } = props;
 	const SEO = prepareSEO(pathname);
 
@@ -23,13 +24,13 @@ function Beneficiaries(props) {
 	});
 
 	useEffect(() => {
-		async function fetchBeneficiaries() {
+		async function fetchBeneficiaries () {
 			const response = await BeneficiariesService.getBeneficiaries(
 				ITEMS_PER_PAGE,
 				activePageNumber,
 				filters.contains,
 				filters.gender,
-				filters.city
+				filters.city,
 			);
 			setBeneficiaries(response.data.items);
 			setNumberOfPages(response.data.pagination.total_pages);
@@ -45,7 +46,7 @@ function Beneficiaries(props) {
 			setActivePageNumber(1);
 			setFilters(updatedFilters);
 		},
-		[filters]
+		[filters],
 	);
 
 	if (isLoading) {
@@ -64,6 +65,7 @@ function Beneficiaries(props) {
 					onChange={updateFilters}
 					explanatoryText={"Pronađi osobu koja traži negu na osnovu sledećih parametara:"}
 					searchWordPlaceholder={"Tip nege..."}
+					inputSuggestions={beneficiaryProfileFieldset.fields.care_type.suggestions}
 				/>
 				<BeneficiaryList profiles={beneficiaries}/>
 				<Pagination
@@ -76,7 +78,7 @@ function Beneficiaries(props) {
 	);
 }
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps (ctx) {
 	const { resolvedUrl } = ctx;
 	return {
 		props: {

@@ -64,13 +64,11 @@ export const RegistrationForm = () => {
 				</form>
 				{/*TODO: ADD NOT ROBOT */}
 				<p className={styles.formDescription}>
-					Slanjem aplikacije prihvatate da budete kontaktirani za razgovor sa zainteresovanim osobama za traženje
-					pomoći u nezi. Platofrma NEGOVATELJI.RS je namenjena kreiranju zajednice i povezivanju osoba koje
-					pružaju
-					pomoć i onih kojima je ta pomoć neophodna i ne preuzima odgovornost za pregovaranje, ugovaranje niti
-					kvalitet posla koji nudi aplikant niti uslove rada i proces selekcije koji sprovodi i traži
-					zainteresovana
-					strana.
+					Registracijom prihvatate da Vas registrovani korisnici kontaktiraju za pružanje
+					podrške u nezi. Platofrma NEGOVATELJI.RS je namenjena kreiranju zajednice i povezivanju
+					osoba koje pružaju pomoć i onih kojima je ta pomoć neophodna i ne preuzima odgovornost
+					za pregovaranje, ugovaranje, niti kvalitet posla koji nudi aplikant niti uslove rada i
+					proces selekcije koji sprovodi i traži zainteresovana strana.
 				</p>
 				<div className={styles.boxFooter}>
 					<LongButton

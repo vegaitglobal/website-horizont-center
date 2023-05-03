@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect } from "react";
 import moment from "moment";
 import DatePicker from "react-datepicker";
-import styles from "./fields.module.scss";
-import { useFormField } from "../../hooks";
-import { ErrorMessages } from "./error-messages/error.messages";
-import { FieldLabel } from "./field-label/field.label";
-import { FIELD_WITH_ERRORS_CLASS_NAME } from "./index";
+import styles from "./select.date.module.scss";
+import { useFormField } from "../../../hooks";
+import { ErrorMessages } from "../error-messages/error.messages";
+import { FieldLabel } from "../field-label/field.label";
+import { FIELD_WITH_ERRORS_CLASS_NAME } from "../index";
 
 export const SelectDate = ({
 	inputValue,
@@ -22,7 +22,7 @@ export const SelectDate = ({
 		inputValue,
 		shouldValidate,
 		validators,
-		extraErrorMessages
+		extraErrorMessages,
 	);
 
 	useEffect(() => {
@@ -35,7 +35,7 @@ export const SelectDate = ({
 	}, [onChange, updateFieldValue]);
 
 	const wrapperClassNames = [
-		styles.fieldWrapper,
+		styles.selectWrapper,
 		className,
 		fieldErrorMessages.length ? `${styles.fieldWrapperWithError} ${FIELD_WITH_ERRORS_CLASS_NAME}` : "",
 	].join(" ");
@@ -50,6 +50,10 @@ export const SelectDate = ({
 				autoComplete="off"
 				selected={Date.parse(fieldValue) ?? new Date()}
 				onChange={(event) => updateValue(event)}
+				withPortal // MODAL VIEW
+				showMonthDropdown
+				showYearDropdown
+				dropdownMode="select"
 			/>
 			<ErrorMessages errorMessages={fieldErrorMessages}/>
 		</div>
