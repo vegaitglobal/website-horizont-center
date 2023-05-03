@@ -65,7 +65,7 @@ export const RegistrationForm = () => {
 				{/*TODO: ADD NOT ROBOT */}
 				<p className={styles.formDescription}>
 					Registracijom prihvatate da Vas registrovani korisnici kontaktiraju za pružanje
-					podrške u nezi. Platofrma NEGOVATELJI.RS je namenjena kreiranju zajednice i povezivanju
+					podrške u nezi. Platforma NEGOVATELJI.RS je namenjena kreiranju zajednice i povezivanju
 					osoba koje pružaju pomoć i onih kojima je ta pomoć neophodna i ne preuzima odgovornost
 					za pregovaranje, ugovaranje, niti kvalitet posla koji nudi aplikant niti uslove rada i
 					proces selekcije koji sprovodi i traži zainteresovana strana.
