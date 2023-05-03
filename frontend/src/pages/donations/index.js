@@ -17,7 +17,7 @@ function Donations(props) {
 	const [donations, setDonations] = useState([]);
 	const [numberOfPages, setNumberOfPages] = useState(0);
 	const [filters, setFilters] = useState({
-		contains: null,
+		isFinancial: null,
 		isActive: null,
 	});
 
@@ -26,7 +26,7 @@ function Donations(props) {
 			const response = await DonationsService.getDonations(
 				ITEMS_PER_PAGE,
 				activePageNumber,
-				filters.contains,
+				filters.isFinancial,
 				filters.isActive
 			);
 			setDonations(response.data.items);
