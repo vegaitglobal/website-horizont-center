@@ -41,7 +41,7 @@ const DEFAULT_SEO = {
 		additionalLinkTags: [
 			{
 				rel: "icon",
-				href: `${ENV.BASE_URL}/favicon.ico`,
+				href: "/images/favicon.ico",
 			},
 		],
 	},
