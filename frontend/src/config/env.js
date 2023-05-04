@@ -18,7 +18,7 @@ export const ENV = {
   DESCRIPTION: publicRuntimeConfig.description,
   AUTHOR: publicRuntimeConfig.author,
   STATIC_DIR: publicRuntimeConfig.staticFolder,
-  LOGO: publicRuntimeConfig.image,
+  LOGO: publicRuntimeConfig.logo,
   IMAGE_SHARE: publicRuntimeConfig.imageShare,
   FACEBOOK_URL: publicRuntimeConfig.facebookUrl,
   YOUTUBE_URL: publicRuntimeConfig.youtubeUrl,

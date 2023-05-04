@@ -67,7 +67,7 @@ const DEFAULT_SEO = {
 				type: "ImageObject",
 				id: `${ENV.BASE_URL}/#logo`,
 				inLanguage: ENV.LOCALE,
-				url: `${ENV.BASE_URL}${ENV.LOGO}`,
+				url: `${ENV.BASE_URL}${ENV.STATIC_DIR}${ENV.LOGO}`,
 				width: 112,
 				height: 112,
 				caption: ENV.NAME,
