@@ -18,6 +18,7 @@ class EmailThreadAdmin(admin.ModelAdmin, ModelAdminMixin):
         'subject',
         'colored_status',
         'recipient_email',
+        'created',
     )
     fields = (
         'subject',
